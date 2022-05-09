@@ -62,15 +62,6 @@
     group: root
     mode: 0755    
   
-      
-- name: Create nginx_pid forder
-  file:
-    path: "{{ nginx_pid_dir }}"
-    state: directory
-    owner: root
-    group: root
-    mode: 0755  
-
 - name: Create nginx_logs forder
   file:
     path: "{{ nginx_log_dir }}"
