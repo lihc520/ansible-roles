@@ -1,0 +1,14 @@
+---
+
+- include_tasks: php-pre.yml
+
+- include_tasks: php-main.yml
+  when: m.stat.exists == false
+#  when: m.stat.exists == false and lsof.stdout | length == 0
+
+- include_tasks: redis.yml
+
+- include_tasks: imagick.yml
+
+- include_tasks: extend.yml
+

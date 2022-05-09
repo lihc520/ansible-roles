@@ -1,0 +1,13 @@
+- name: Install mysql
+  hosts: c7-web
+  vars:
+    mysql_version: mysql-5.7.37-linux-glibc2.12-x86_64
+    mysql_data_dir: /data/mysql
+    mysql_root_dir: /usr/local/mysql
+    mysql_config_file: /etc/my.cnf
+    mysql_log_dir: /data/logs/mysql
+    mysql_run_dir: /var/run/mysql
+    mysql_pre_dir: /usr/share/mysql
+    mysql_root_password: password
+  roles:
+    - mysql
